@@ -7,14 +7,20 @@
 
 import Foundation
 
-public final class YahooService {
+protocol YahooServiceDelegate: AnyObject {
+    func didGetQuote(_ yahooService: YahooService, data: YahooModel)
+}
+
+struct YahooService {
+
+    weak var delegate: YahooServiceDelegate?
 
     public enum ResultHttp<T> {
         case success(resultHttp: T)
         case error(message: String?)
     }
 
-    public func searchRepositories (query: String = "AAPL") {
+    public func getQuoteOf (_ stock: String = "AAPL,FB,TSLA") {
         var components = URLComponents()
         components.scheme = "https"
         components.host = "yfapi.net"
@@ -22,7 +28,7 @@ public final class YahooService {
         components.queryItems = [
             URLQueryItem(name: "region", value: "US"),
             URLQueryItem(name: "lang", value: "en"),
-            URLQueryItem(name: "symbols", value: query)
+            URLQueryItem(name: "symbols", value: stock)
         ]
 
         guard let url = components.url else { return }
@@ -51,7 +57,9 @@ public final class YahooService {
             do {
                 let decoder = JSONDecoder()
                 let response = try decoder.decode(YahooModel.self, from: data)
-                print(response.quoteResponse.result[0])
+
+                self.delegate?.didGetQuote(self, data: response)
+
             } catch {
                 print(error)
                 return

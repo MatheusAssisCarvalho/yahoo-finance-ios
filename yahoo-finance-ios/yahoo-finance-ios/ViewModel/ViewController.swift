@@ -11,11 +11,28 @@ class ViewController: UIViewController {
 
     var yahooService = YahooService()
 
+
+    var results: [Result] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        yahooService.delegate = self
+
         yahooService.searchRepositories()
         view.backgroundColor = .systemBlue
     }
 
+}
+
+extension ViewController: YahooServiceDelegate {
+    func didGetQuote(_ yahooService: YahooService, data: YahooModel) {
+        DispatchQueue.main.async {
+
+            self.results = data.quoteResponse.result
+            print("aqui")
+            print(self.results)
+
+        }
+    }
 }
