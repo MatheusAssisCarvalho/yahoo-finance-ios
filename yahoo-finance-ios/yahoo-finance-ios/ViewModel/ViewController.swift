@@ -11,7 +11,6 @@ class ViewController: UIViewController {
 
     var yahooService = YahooService()
 
-
     var results: [Result] = []
 
     override func viewDidLoad() {
@@ -19,7 +18,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         yahooService.delegate = self
 
-        yahooService.searchRepositories()
+        yahooService.getQuoteOf()
         view.backgroundColor = .systemBlue
     }
 
