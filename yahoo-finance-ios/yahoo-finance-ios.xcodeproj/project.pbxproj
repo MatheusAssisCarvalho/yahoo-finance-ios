@@ -11,8 +11,9 @@
 		40733D4A27B15B160088AC3B /* YahooModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40733D4927B15B160088AC3B /* YahooModel.swift */; };
 		4E9AD60727B14DDA0082F993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AD60627B14DDA0082F993 /* AppDelegate.swift */; };
 		4E9AD60927B14DDA0082F993 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AD60827B14DDA0082F993 /* SceneDelegate.swift */; };
-		4E9AD60B27B14DDA0082F993 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AD60A27B14DDA0082F993 /* ViewController.swift */; };
+		4E9AD60B27B14DDA0082F993 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AD60A27B14DDA0082F993 /* HomeViewController.swift */; };
 		4E9AD61027B14DDC0082F993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9AD60F27B14DDC0082F993 /* Assets.xcassets */; };
+		4EA7950527BBC6250005E6C4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA7950427BBC6250005E6C4 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +22,10 @@
 		4E9AD60327B14DDA0082F993 /* yahoo-finance-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yahoo-finance-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9AD60627B14DDA0082F993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E9AD60827B14DDA0082F993 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4E9AD60A27B14DDA0082F993 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E9AD60A27B14DDA0082F993 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4E9AD60F27B14DDC0082F993 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9AD61427B14DDC0082F993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EA7950427BBC6250005E6C4 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,7 @@
 		4E9AD61B27B14E640082F993 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				4E9AD60A27B14DDA0082F993 /* ViewController.swift */,
+				4E9AD60A27B14DDA0082F993 /* HomeViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -94,6 +96,7 @@
 		4E9AD61C27B14E6D0082F993 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4EA7950427BBC6250005E6C4 /* HomeViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9AD61027B14DDC0082F993 /* Assets.xcassets in Resources */,
+				4EA7950527BBC6250005E6C4 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40733D4A27B15B160088AC3B /* YahooModel.swift in Sources */,
-				4E9AD60B27B14DDA0082F993 /* ViewController.swift in Sources */,
+				4E9AD60B27B14DDA0082F993 /* HomeViewController.swift in Sources */,
 				4E9AD60727B14DDA0082F993 /* AppDelegate.swift in Sources */,
 				40733D4827B15AB70088AC3B /* YahooService.swift in Sources */,
 				4E9AD60927B14DDA0082F993 /* SceneDelegate.swift in Sources */,
