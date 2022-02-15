@@ -17,6 +17,10 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
 //        yahooService.delegate = self
 //        yahooService.getQuoteOf()
+
+        let nibCellSummary = UINib(nibName: "SummaryCell", bundle: nil)
+        tableView.register(nibCellSummary, forCellReuseIdentifier: "MySummaryCell")
+        tableView.dataSource = self
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,14 +28,12 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = indexPath.row
-//        let myCell = cells[row]
+         let cell = tableView
+                .dequeueReusableCell(withIdentifier: "MySummaryCell") as? SummaryCell
+            cell?.label.text = "Hello world."
+            return cell!
 
-        var cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-//        cell.contentView = myCell
-        return cell
     }
-
 }
 
 extension HomeViewController: YahooServiceDelegate {
