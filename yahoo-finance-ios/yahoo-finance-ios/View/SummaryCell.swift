@@ -9,16 +9,20 @@ import UIKit
 
 class SummaryCell: UITableViewCell {
 
-    @IBOutlet var label: UILabel!
+    @IBOutlet weak var venda: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var compra: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        name.text = "Uma empresa Legal"
+        compra.text = "500,00"
+        venda.text = "450,00"
+//        label.backgroundColor = .systemBlue
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 

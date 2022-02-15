@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		40733D4827B15AB70088AC3B /* YahooService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40733D4727B15AB70088AC3B /* YahooService.swift */; };
 		40733D4A27B15B160088AC3B /* YahooModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40733D4927B15B160088AC3B /* YahooModel.swift */; };
+		4099D8F327BC2A9300EB24B3 /* SummaryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4099D8F227BC2A9300EB24B3 /* SummaryCellViewModel.swift */; };
 		4E2910E127BC0FCE0016CC2A /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2910E027BC0FCE0016CC2A /* SummaryCell.swift */; };
 		4E2910E327BC10050016CC2A /* SummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2910E227BC10050016CC2A /* SummaryCell.xib */; };
 		4E9AD60727B14DDA0082F993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AD60627B14DDA0082F993 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		40733D4727B15AB70088AC3B /* YahooService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooService.swift; sourceTree = "<group>"; };
 		40733D4927B15B160088AC3B /* YahooModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = YahooModel.swift; path = "yahoo-finance-ios/Service/YahooModel.swift"; sourceTree = SOURCE_ROOT; };
+		4099D8F227BC2A9300EB24B3 /* SummaryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCellViewModel.swift; sourceTree = "<group>"; };
 		4E2910E027BC0FCE0016CC2A /* SummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
 		4E2910E227BC10050016CC2A /* SummaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryCell.xib; sourceTree = "<group>"; };
 		4E9AD60327B14DDA0082F993 /* yahoo-finance-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yahoo-finance-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +94,7 @@
 		4E9AD61B27B14E640082F993 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				4E9AD60A27B14DDA0082F993 /* HomeViewController.swift */,
+				4099D8F227BC2A9300EB24B3 /* SummaryCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -100,6 +102,7 @@
 		4E9AD61C27B14E6D0082F993 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E9AD60A27B14DDA0082F993 /* HomeViewController.swift */,
 				4EA7950427BBC6250005E6C4 /* HomeViewController.xib */,
 				4E2910E027BC0FCE0016CC2A /* SummaryCell.swift */,
 				4E2910E227BC10050016CC2A /* SummaryCell.xib */,
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4099D8F327BC2A9300EB24B3 /* SummaryCellViewModel.swift in Sources */,
 				40733D4A27B15B160088AC3B /* YahooModel.swift in Sources */,
 				4E9AD60B27B14DDA0082F993 /* HomeViewController.swift in Sources */,
 				4E9AD60727B14DDA0082F993 /* AppDelegate.swift in Sources */,

@@ -20,6 +20,9 @@ class HomeViewController: UIViewController, UITableViewDataSource {
 
         let nibCellSummary = UINib(nibName: "SummaryCell", bundle: nil)
         tableView.register(nibCellSummary, forCellReuseIdentifier: "MySummaryCell")
+        tableView.cellLayoutMarginsFollowReadableWidth = true
+        tableView.rowHeight = 132
+
         tableView.dataSource = self
     }
 
@@ -28,10 +31,13 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView
-                .dequeueReusableCell(withIdentifier: "MySummaryCell") as? SummaryCell
-            cell?.label.text = "Hello world."
-            return cell!
+        tableView.estimatedRowHeight = 100
+        let cell = tableView
+            .dequeueReusableCell(withIdentifier: "MySummaryCell") as? SummaryCell
+        cell?.preservesSuperviewLayoutMargins = false
+        cell?.separatorInset = .zero
+        cell?.layoutMargins = .zero
+        return cell!
 
     }
 }
