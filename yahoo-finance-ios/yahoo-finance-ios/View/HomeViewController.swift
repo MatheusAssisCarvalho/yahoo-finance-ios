@@ -31,9 +31,19 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         let cell = tableView
             .dequeueReusableCell(withIdentifier: "MySummaryCell") as? SummaryCell
         let currency = self.results[indexPath.row].currency
+
+        let numFormat = NumberFormatter()
+        numFormat.numberStyle = .decimal
+        numFormat.minimumFractionDigits = 2
+        numFormat.locale = Locale(identifier: "pt_BR")
+
         cell?.name.text = self.results[indexPath.row].displayName
-        cell?.venda.text = "\(currency) \(self.results[indexPath.row].ask)"
-        cell?.compra.text = "\(currency) \(self.results[indexPath.row].bid)"
+
+        let venda = numFormat.string(from: NSNumber(value: self.results[indexPath.row].ask))!
+        cell?.venda.text = "\(currency) \(venda)"
+
+        let compra = numFormat.string(from: NSNumber(value: self.results[indexPath.row].bid))!
+        cell?.compra.text = "\(currency) \(compra)"
 
         return cell!
     }

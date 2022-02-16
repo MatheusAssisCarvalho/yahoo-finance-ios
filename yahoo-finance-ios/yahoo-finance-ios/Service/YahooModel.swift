@@ -16,8 +16,8 @@ public struct QuoteResponse: Decodable {
 }
 
 public struct Result: Decodable {
-    let bid: Decimal
-    let ask: Decimal
+    let bid: Float
+    let ask: Float
     let currency: String
     let displayName: String
 }

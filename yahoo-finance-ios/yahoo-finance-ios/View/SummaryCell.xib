@@ -18,6 +18,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYl-A9-S2R">
                     <rect key="frame" x="0.0" y="0.0" width="238" height="98"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome Empresa" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYl-Vc-cV9">
+                            <rect key="frame" x="66.5" y="9" width="105.5" height="22"/>
+                            <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="16"/>
+                            <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Venda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmy-58-u8t">
                             <rect key="frame" x="8" y="49" width="33" height="15"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -26,7 +32,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor Venda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnI-jA-ZtT">
-                            <rect key="frame" x="166" y="49.5" width="64" height="14.5"/>
+                            <rect key="frame" x="166" y="53.5" width="64" height="14.5"/>
                             <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="13"/>
                             <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
                             <nil key="highlightedColor"/>
@@ -39,17 +45,17 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor Compra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9n-HI-vnF">
-                            <rect key="frame" x="156.5" y="72" width="73.5" height="14.5"/>
+                            <rect key="frame" x="156.5" y="76" width="73.5" height="14.5"/>
                             <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="13"/>
                             <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome Empresa" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYl-Vc-cV9">
-                            <rect key="frame" x="66.5" y="9" width="105.5" height="18"/>
-                            <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="16"/>
-                            <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxo-ko-W6O">
+                            <rect key="frame" x="210" y="9" width="20" height="22"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="info.circle.fill" catalog="system"/>
+                        </button>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="83v-LT-vbF"/>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,6 +64,9 @@
                         <constraint firstItem="ZYl-Vc-cV9" firstAttribute="top" secondItem="RYl-A9-S2R" secondAttribute="top" constant="9" id="A5r-bQ-dOh"/>
                         <constraint firstItem="X9n-HI-vnF" firstAttribute="top" secondItem="dnI-jA-ZtT" secondAttribute="bottom" constant="8" symbolic="YES" id="DR5-gE-t5g"/>
                         <constraint firstItem="ZYl-Vc-cV9" firstAttribute="centerX" secondItem="RYl-A9-S2R" secondAttribute="centerX" id="Gru-vi-lr2"/>
+                        <constraint firstItem="Sxo-ko-W6O" firstAttribute="centerY" secondItem="ZYl-Vc-cV9" secondAttribute="centerY" id="NJb-36-tmY"/>
+                        <constraint firstItem="83v-LT-vbF" firstAttribute="trailing" secondItem="Sxo-ko-W6O" secondAttribute="trailing" constant="8" id="fTg-dF-g9e"/>
+                        <constraint firstItem="Sxo-ko-W6O" firstAttribute="top" secondItem="ZYl-Vc-cV9" secondAttribute="top" id="loF-g7-dev"/>
                         <constraint firstItem="dnI-jA-ZtT" firstAttribute="top" secondItem="ZYl-Vc-cV9" secondAttribute="bottom" constant="22.5" id="mYs-Z0-s8A"/>
                         <constraint firstItem="83v-LT-vbF" firstAttribute="trailing" secondItem="dnI-jA-ZtT" secondAttribute="trailing" constant="8" id="p3n-9F-rz5"/>
                     </constraints>
@@ -83,6 +92,7 @@
         </view>
     </objects>
     <resources>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
