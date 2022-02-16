@@ -20,7 +20,7 @@ struct YahooService {
         case error(message: String?)
     }
 
-    public func getQuoteOf (_ stock: String = "AAPL,FB,TSLA") {
+    public func getQuoteOf (_ stock: String = "AAPL,FB,TSLA,SPCE,AMD,NVDA,ZNGA,SOFI,RBLX") {
         var components = URLComponents()
         components.scheme = "https"
         components.host = "yfapi.net"

@@ -18,7 +18,6 @@ class SummaryCell: UITableViewCell {
         name.text = "Uma empresa Legal"
         compra.text = "500,00"
         venda.text = "450,00"
-//        label.backgroundColor = .systemBlue
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

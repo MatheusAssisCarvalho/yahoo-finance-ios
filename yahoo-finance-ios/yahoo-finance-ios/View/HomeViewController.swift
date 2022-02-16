@@ -15,8 +15,8 @@ class HomeViewController: UIViewController, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        yahooService.delegate = self
-//        yahooService.getQuoteOf()
+        yahooService.delegate = self
+        yahooService.getQuoteOf()
 
         let nibCellSummary = UINib(nibName: "SummaryCell", bundle: nil)
         tableView.register(nibCellSummary, forCellReuseIdentifier: "MySummaryCell")
@@ -27,18 +27,21 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return 10
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.estimatedRowHeight = 100
         let cell = tableView
             .dequeueReusableCell(withIdentifier: "MySummaryCell") as? SummaryCell
-        cell?.preservesSuperviewLayoutMargins = false
         cell?.separatorInset = .zero
         cell?.layoutMargins = .zero
-        return cell!
 
+        let currency = self.results[indexPath.row].currency
+        cell?.name.text = self.results[indexPath.row].displayName
+        cell?.venda.text = "\(currency) \(self.results[indexPath.row].ask)"
+        cell?.compra.text = "\(currency) \(self.results[indexPath.row].bid)"
+
+        return cell!
     }
 }
 

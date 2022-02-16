@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYl-A9-S2R">
-                    <rect key="frame" x="0.0" y="0.0" width="238" height="135"/>
+                    <rect key="frame" x="0.0" y="0.0" width="238" height="125"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Venda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmy-58-u8t">
                             <rect key="frame" x="0.0" y="54" width="48" height="21"/>
@@ -52,6 +52,7 @@
                         </label>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="83v-LT-vbF"/>
+                    <color key="backgroundColor" systemColor="systemTealColor"/>
                     <constraints>
                         <constraint firstItem="X9n-HI-vnF" firstAttribute="trailing" secondItem="dnI-jA-ZtT" secondAttribute="trailing" id="3uh-4E-1Uz"/>
                         <constraint firstItem="ZYl-Vc-cV9" firstAttribute="top" secondItem="RYl-A9-S2R" secondAttribute="top" id="A5r-bQ-dOh"/>
@@ -62,12 +63,12 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <accessibility key="accessibilityConfiguration" identifier="MySummaryCell"/>
             <constraints>
                 <constraint firstItem="RYl-A9-S2R" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5t4-r4-Pmo"/>
                 <constraint firstItem="RYl-A9-S2R" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Frt-0Y-fhr"/>
-                <constraint firstAttribute="bottom" secondItem="RYl-A9-S2R" secondAttribute="bottom" id="jhc-fA-sUJ"/>
+                <constraint firstItem="RYl-A9-S2R" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-10" id="jhc-fA-sUJ"/>
                 <constraint firstAttribute="trailing" secondItem="RYl-A9-S2R" secondAttribute="trailing" id="jof-Dr-pfj"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
@@ -82,8 +83,8 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
