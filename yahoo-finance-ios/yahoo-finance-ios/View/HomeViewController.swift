@@ -20,22 +20,16 @@ class HomeViewController: UIViewController, UITableViewDataSource {
 
         let nibCellSummary = UINib(nibName: "SummaryCell", bundle: nil)
         tableView.register(nibCellSummary, forCellReuseIdentifier: "MySummaryCell")
-        tableView.cellLayoutMarginsFollowReadableWidth = true
-        tableView.rowHeight = 132
-
         tableView.dataSource = self
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.results.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView
             .dequeueReusableCell(withIdentifier: "MySummaryCell") as? SummaryCell
-        cell?.separatorInset = .zero
-        cell?.layoutMargins = .zero
-
         let currency = self.results[indexPath.row].currency
         cell?.name.text = self.results[indexPath.row].displayName
         cell?.venda.text = "\(currency) \(self.results[indexPath.row].ask)"
@@ -48,12 +42,8 @@ class HomeViewController: UIViewController, UITableViewDataSource {
 extension HomeViewController: YahooServiceDelegate {
     func didGetQuote(_ yahooService: YahooService, data: YahooModel) {
         DispatchQueue.main.async {
-
             self.results = data.quoteResponse.result
-            print("aqui")
-            print(self.results)
-
+            self.tableView.reloadData()
         }
     }
-
 }
